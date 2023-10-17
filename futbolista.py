@@ -1,43 +1,33 @@
-from persona import Persona
 from deportista import Deportista
-
+from persona import Persona
 class Futbolista(Persona, Deportista):
     listaFutbolistas = []
 
-    def __init__(self, Nombre, edad, altura, sexo, deporte="Futbol", añosPracticando=0, golesMarcados=0,
-                 tarjetasRojas=0, piernaHabil=""):
-        Persona.__init__(self, Nombre, edad, altura, sexo)
-        Deportista.__init__(self, deporte, añosPracticando)
-        self.golesMarcados = golesMarcados
-        self.tarjetasRojas = tarjetasRojas
-        self.piernaHabil = piernaHabil
-
+    def __init__(self, nombre, edad, altura, sexo, añosPracticando, golesMarcados, tarjetasRojas, piernaHabil):
+        Persona.__init__(self, nombre, edad, altura, sexo)
+        Deportista.__init__(self, "Futbol", añosPracticando)
+        self.__golesMarcados = golesMarcados
+        self.__tarjetasRojas = tarjetasRojas
+        self.__piernaHabil = piernaHabil
         Futbolista.listaFutbolistas.append(self)
 
-    def getNombre(self):
-        return self.nombre
-
-    def getEdad(self):
-        return self.edad
-
-    def getAltura(self):
-        return self.altura
-
-    def getSexo(self):
-        return self.sexo
-
-    def getAñosPracticando(self):
-        return self.añosPracticando
-
     def getGolesMarcados(self):
-        return self.golesMarcados
+        return self.__golesMarcados
+
+    def setGolesMarcados(self, golesMarcados):
+        self.__golesMarcados = golesMarcados
 
     def getTarjetasRojas(self):
-        return self.tarjetasRojas
+        return self.__tarjetasRojas
+
+    def setTarjetasRojas(self, tarjetasRojas):
+        self.__tarjetasRojas = tarjetasRojas
 
     def getPiernaHabil(self):
-        return self.piernaHabil
+        return self.__piernaHabil
+
+    def setPiernaHabil(self, piernaHabil):
+        self.__piernaHabil = piernaHabil
 
     def __str__(self):
         return f"Mi nombre es {self.getNombre()} soy profesional en el deporte {self.getDeporte()} Tengo {self.getEdad()} años de edad y llevo {self.getAñosPracticando()} años en el deporte"
-

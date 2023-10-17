@@ -1,30 +1,30 @@
 class Persona:
     def __init__(self, nombre, edad, altura, sexo):
-        self.nombre = nombre
-        self.edad = edad
-        self.altura = altura
-        self.sexo = sexo
+        self.__nombre = nombre
+        self.__edad = edad
+        self.__altura = altura
+        self.__sexo = sexo
 
     def getNombre(self):
-        return self.nombre
+        return self.__nombre
 
     def setNombre(self, nombre):
-        self.nombre = nombre
+        self.__nombre = nombre
 
     def getEdad(self):
-        return self.edad
+        return self.__edad
 
     def setEdad(self, edad):
-        self.edad = edad
+        self.__edad = edad
 
     def getAltura(self):
-        return self.altura
+        return self.__altura
 
     def setAltura(self, altura):
-        self.altura = altura
+        self.__altura = altura
 
     def getSexo(self):
-        return self.sexo
+        return self.__sexo
 
     def setSexo(self, sexo):
-        self.sexo = sexo
+        self.__sexo = sexo

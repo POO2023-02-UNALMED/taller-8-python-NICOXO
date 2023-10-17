@@ -4,9 +4,9 @@ from deportista import Deportista
 class Futbolista(Persona, Deportista):
     listaFutbolistas = []
 
-    def __init__(self, nombre, edad, altura, sexo, deporte="Futbol", añosPracticando=0, golesMarcados=0,
+    def __init__(self, Nombre, edad, altura, sexo, deporte="Futbol", añosPracticando=0, golesMarcados=0,
                  tarjetasRojas=0, piernaHabil=""):
-        Persona.__init__(self, nombre, edad, altura, sexo)
+        Persona.__init__(self, Nombre, edad, altura, sexo)
         Deportista.__init__(self, deporte, añosPracticando)
         self.golesMarcados = golesMarcados
         self.tarjetasRojas = tarjetasRojas
